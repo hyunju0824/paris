@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>파리바게트</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<!--비율 유지하는 박스 설계
+    1. 부모는 너비만 지정 (높이 스스로 설계 불가능)
+    2. 자식중 하나가 위쪽패딩을 설계해주면 부모에게 높이가 생성됨
+        여의치 않으면 ::before 사용해야한다.
+    3. 자식중 내용을 가지는 inner박스가 있다면
+       inner박스에 패딩 설계 불가능!  
+       부모 기준으로 좌표(패딩 가진 아이)를 덮어야한다. (absolute)
+    4. 로고처럼 내용 없으면 걔한테 패딩주면 끝.
+    
+    부모는 너비만 가지면 되고 자식에 패딩탑 주면 됨.    
+    -->
+<body>
+    <div id="skip" class="center">
+        <a href="#paris-main">본문 바로가기</a>
+        <a href="#paris-gnb">주 메뉴 바로가기</a>
+    </div>
+    <header id="paris-hd">
+        <div class="wrapper">
+            <h1 class="logo"><a href="/"><span class="blind">파리바게트</span></a></h1>
+            <h2 class="blind">주 메뉴</h2>
+            <nav id="paris-gnb" class="clearfix">
+                <ol class="gnb1">
+                    <li class="depth1">
+                        <a href="#">PRESENTATION</a>
+                        <ul class="depth2">
+                            <li><a href="#">sub1-1</a></li>
+                            <li><a href="#">sub1-2</a></li>
+                            <li><a href="#">sub1-3</a></li>
+                        </ul>
+                    </li>
+                    <li class="depth1">
+                        <a href="#">BREAD NOW</a>
+                        <ul class="depth2">
+                            <li><a href="#">sub2-1</a></li>
+                            <li><a href="#">sub2-2</a></li>
+                            <li><a href="#">sub2-3</a></li>
+                        </ul>
+                    </li>
+                    <li class="depth1">
+                        <a href="#">PRODUCTS</a>
+                        <ul class="depth2">
+                            <li><a href="#">sub3-1</a></li>
+                            <li><a href="#">sub3-2</a></li>
+                            <li><a href="#">sub3-3</a></li>
+                        </ul>
+                    </li>
+                </ol>
+                <ol class="gnb2">
+                    <li class="depth1">
+                        <a href="#">STORE</a>
+                        <ul class="depth2">
+                            <li><a href="#">sub4-1</a></li>
+                            <li><a href="#">sub4-2</a></li>
+                            <li><a href="#">sub4-3</a></li>
+                        </ul>
+                    </li>
+                    <li class="depth1">
+                        <a href="#">DELIVERY</a>
+                        <ul class="depth2">
+                            <li><a href="#">sub5-1</a></li>
+                            <li><a href="#">sub5-2</a></li>
+                            <li><a href="#">sub5-3</a></li>
+                        </ul>
+                    </li>
+                    <li class="depth1">
+                        <a href="#">PROMOTION</a>
+                        <ul class="depth2">
+                            <li><a href="#">sub6-1</a></li>
+                            <li><a href="#">sub6-2</a></li>
+                            <li><a href="#">sub6-3</a></li>
+                        </ul>
+                    </li>
+                </ol>
+            </nav>
+            <button class="btn-sch"><span class="blind">검색하기</span></button>
+        </div>
+    </header>
+    <main id="paris-main">
+        <section class="main-banner-container pd0">
+            <h2 class="blind">메인배너</h2>
+
+
+
+            <input type="radio" id="mb-radio1" name="mb-radio" checked>
+            <input type="radio" id="mb-radio2" name="mb-radio">
+            <input type="radio" id="mb-radio3" name="mb-radio">
+            <input type="radio" id="mb-radio4" name="mb-radio">
+            <input type="radio" id="mb-radio5" name="mb-radio">
+            <div class="main-banner-wrap">
+                <ol class="main-banner">
+                    <li class="main-banner-slide1"><a href="#">메인배너1</a></li>
+                    <li class="main-banner-slide2"><a href="#">메인배너2</a></li>
+                    <li class="main-banner-slide3"><a href="#">메인배너3</a></li>
+                    <li class="main-banner-slide4"><a href="#">메인배너4</a></li>
+                    <li class="main-banner-slide5"><a href="#">메인배너5</a></li>
+                </ol>
+            </div>
+            <div class="main-banner-pagination">
+                <label for="mb-radio1" class="mb-label1">1</label>
+                <label for="mb-radio2" class="mb-label2">2</label>
+                <label for="mb-radio3" class="mb-label3">3</label>
+                <label for="mb-radio4" class="mb-label4">4</label>
+                <label for="mb-radio5" class="mb-label5">5</label>
+            </div>
+            <div class="main-banner-controls">
+                <label for="mb-radio1" class="mb-label1">1</label>
+                <label for="mb-radio2" class="mb-label2">2</label>
+                <label for="mb-radio3" class="mb-label3">3</label>
+                <label for="mb-radio4" class="mb-label4">4</label>
+                <label for="mb-radio5" class="mb-label5">5</label>
+            </div>
+        </section>
+
+        <section class="main-presentation-container">
+            <div class="wrapper main-presentation-wrap relative">
+                <h2>PRESENTATION</h2>
+                <ul class="main-presentation clearfix">
+                    <li class="presentation1">
+                        <a href="">
+                            <dl>
+                                <dt>경산 대추</dt>
+                                <dd>경산 대추 농가와 함께한 모두가 행복한 행복상생 프로젝트</dd>
+                            </dl>
+                        </a>
+                    </li>
+                    <li class="presentation2">
+                        <a href="">
+                            <dl>
+                                <dt>카페 아다지오 디카페인</dt>
+                                <dd>카페 아다지오 디카페인 블라인드 테스트</dd>
+                            </dl>
+                        </a>
+                    </li>
+                    <li class="presentation3">
+                        <a href="">
+                            <dl>
+                                <dt>무안 양파</dt>
+                                <dd>무안 양파 농가와 함께한 모두가 행복한 행복상생 프로젝트</dd>
+                            </dl>
+                        </a>
+                    </li>
+                </ul>
+                <a href="#" class="btn-more">show more</a>
+            </div>
+        </section>
+
+
+
+
+    </main>
+    <footer id="paris-ft">
+        푸터영역
+    </footer>
+</body>
+
+</html>
